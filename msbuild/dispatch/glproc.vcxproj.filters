@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\..\dispatch\CMakeLists.txt" />
+    <CustomBuild Include="..\CMakeFiles\9748423904a4d44300af693b7760e93c\glproc.hpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\CMakeFiles\5f373eb16f508101ec9b0c8c5d29e46a\glproc.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\glproc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{33ECA42E-A0B4-4465-8830-35005A32722E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

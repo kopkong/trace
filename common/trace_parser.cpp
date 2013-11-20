@@ -56,6 +56,7 @@ Parser::~Parser() {
 
 
 bool Parser::open(const char *filename) {
+	os::log("Parser::open \n");
     assert(!file);
     file = File::createForRead(filename);
     if (!file) {
@@ -93,6 +94,7 @@ deleteAll(Container &c)
 }
 
 void Parser::close(void) {
+	os::log("Parser::close \n");
     if (file) {
         file->close();
         delete file;

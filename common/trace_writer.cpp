@@ -60,6 +60,7 @@ Writer::close(void) {
 
 bool
 Writer::open(const char *filename) {
+	os::log("Writer::open \n");
     close();
 
     if (!m_file->open(filename, File::Write)) {
@@ -143,6 +144,7 @@ void Writer::beginBacktrace(unsigned num_frames) {
 }
 
 void Writer::writeStackFrame(const RawStackFrame *frame) {
+	os::log("Writer::writeStackFrame \n");
     _writeUInt(frame->id);
     if (!lookup(frames, frame->id)) {
         if (frame->module != NULL) {
@@ -171,6 +173,7 @@ void Writer::writeStackFrame(const RawStackFrame *frame) {
 }
 
 unsigned Writer::beginEnter(const FunctionSig *sig, unsigned thread_id) {
+	os::log("Writer::beginEnter \n");
     _writeByte(trace::EVENT_ENTER);
     _writeUInt(thread_id);
     _writeUInt(sig->id);

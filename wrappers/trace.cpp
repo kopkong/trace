@@ -49,7 +49,7 @@ namespace trace {
 static bool
 isZygoteProcess(void)
 {
-    os::log("isZygoteProcess");	
+    os::log("trace isZygoteProcess\n");	
     os::String proc_name;
 
     proc_name = os::getProcessName();
@@ -61,7 +61,7 @@ isZygoteProcess(void)
 static os::String
 getZygoteProcessName(void)
 {
-    os::log("getZygoteProcessName");
+    os::log("trace getZygoteProcessName\n");
     os::String path;
     size_t size = PATH_MAX;
     char *buf = path.buf(size);
@@ -80,7 +80,7 @@ getZygoteProcessName(void)
 bool
 isTracingEnabled(void)
 {
-    os::log("isTracingEnabled");
+    os::log("trace isTracingEnabled\n");
     static pid_t cached_pid;
     static bool enabled;
     pid_t pid;

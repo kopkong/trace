@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{D705AF0A-91A6-4F50-B16C-B59C37B914D7}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>glretrace</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\trace\msbuild\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">glretrace.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">glretrace</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\trace\msbuild\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">glretrace.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">glretrace</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\trace\msbuild\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">glretrace.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">glretrace</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\trace\msbuild\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">glretrace.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">glretrace</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4063;4100;4127;4244;4505;4512;4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_WIN32_WINNT=0x0601;WINVER=0x0601;_USE_MATH_DEFINES;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;RETRACE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>G:/trace/msbuild/Debug/glretrace.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_WIN32_WINNT=0x0601;WINVER=0x0601;_USE_MATH_DEFINES;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;RETRACE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Debug\retrace_common.lib;Debug\glretrace_common.lib;..\dispatch\Debug\glproc_gl.lib;Debug\retrace_common.lib;..\image\Debug\image.lib;..\thirdparty\libpng\Debug\png_bundled.lib;..\Debug\common.lib;..\thirdparty\zlib\Debug\z_bundled.lib;..\thirdparty\snappy\Debug\snappy_bundled.lib;..\thirdparty\getopt\Debug\getopt_bundled.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>G:/trace/msbuild/retrace/Debug/glretrace.lib</ImportLibrary>
+      <LinkIncremental>true</LinkIncremental>
+      <ProgramDataBaseFile>G:/trace/msbuild/Debug/glretrace.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4018;4063;4100;4127;4244;4505;4512;4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WINVER=0x0601;_USE_MATH_DEFINES;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;RETRACE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>G:/trace/msbuild/Release/glretrace.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WINVER=0x0601;_USE_MATH_DEFINES;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;RETRACE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;Release\retrace_common.lib;Release\glretrace_common.lib;..\dispatch\Release\glproc_gl.lib;Release\retrace_common.lib;..\image\Release\image.lib;..\thirdparty\libpng\Release\png_bundled.lib;..\Release\common.lib;..\thirdparty\zlib\Release\z_bundled.lib;..\thirdparty\snappy\Release\snappy_bundled.lib;..\thirdparty\getopt\Release\getopt_bundled.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>G:/trace/msbuild/retrace/Release/glretrace.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/trace/msbuild/Release/glretrace.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4018;4063;4100;4127;4244;4505;4512;4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat></DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WINVER=0x0601;_USE_MATH_DEFINES;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;RETRACE;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>G:/trace/msbuild/MinSizeRel/glretrace.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WINVER=0x0601;_USE_MATH_DEFINES;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;RETRACE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;MinSizeRel\retrace_common.lib;MinSizeRel\glretrace_common.lib;..\dispatch\MinSizeRel\glproc_gl.lib;MinSizeRel\retrace_common.lib;..\image\MinSizeRel\image.lib;..\thirdparty\libpng\MinSizeRel\png_bundled.lib;..\MinSizeRel\common.lib;..\thirdparty\zlib\MinSizeRel\z_bundled.lib;..\thirdparty\snappy\MinSizeRel\snappy_bundled.lib;..\thirdparty\getopt\MinSizeRel\getopt_bundled.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>G:/trace/msbuild/retrace/MinSizeRel/glretrace.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/trace/msbuild/MinSizeRel/glretrace.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4018;4063;4100;4127;4244;4505;4512;4800</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WINVER=0x0601;_USE_MATH_DEFINES;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;RETRACE;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>G:/trace/msbuild/RelWithDebInfo/glretrace.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0601;WINVER=0x0601;_USE_MATH_DEFINES;NOMINMAX;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;RETRACE;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:/trace/thirdparty/directxtex/DirectXTex;C:/Program Files (x86)/Microsoft DirectX SDK (June 2010)/Include;G:/trace/thirdparty/khronos;G:/trace/thirdparty/msinttypes;G:/trace/thirdparty/zlib;G:/trace/thirdparty/snappy;G:/trace/thirdparty/getopt;G:/trace/msbuild;G:/trace;G:/trace/common;G:/trace/retrace;G:/trace/helpers;G:/trace/msbuild/dispatch;G:/trace/dispatch;G:/trace/image;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;RelWithDebInfo\retrace_common.lib;RelWithDebInfo\glretrace_common.lib;..\dispatch\RelWithDebInfo\glproc_gl.lib;RelWithDebInfo\retrace_common.lib;..\image\RelWithDebInfo\image.lib;..\thirdparty\libpng\RelWithDebInfo\png_bundled.lib;..\RelWithDebInfo\common.lib;..\thirdparty\zlib\RelWithDebInfo\z_bundled.lib;..\thirdparty\snappy\RelWithDebInfo\snappy_bundled.lib;..\thirdparty\getopt\RelWithDebInfo\getopt_bundled.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>G:/trace/msbuild/retrace/RelWithDebInfo/glretrace.lib</ImportLibrary>
+      <LinkIncremental>true</LinkIncremental>
+      <ProgramDataBaseFile>G:/trace/msbuild/RelWithDebInfo/glretrace.pdb</ProgramDataBaseFile>
+      <StackReserveSize>10000000</StackReserveSize>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\retrace\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule G:/trace/retrace/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HG:/trace -BG:/trace/msbuild --check-stamp-file G:\trace\msbuild\retrace\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:/trace/retrace/CMakeLists.txt;G:\trace\retrace\CMakeLists.txt;G:\trace\retrace\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\trace\msbuild\retrace\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule G:/trace/retrace/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HG:/trace -BG:/trace/msbuild --check-stamp-file G:\trace\msbuild\retrace\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:/trace/retrace/CMakeLists.txt;G:\trace\retrace\CMakeLists.txt;G:\trace\retrace\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\trace\msbuild\retrace\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule G:/trace/retrace/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HG:/trace -BG:/trace/msbuild --check-stamp-file G:\trace\msbuild\retrace\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:/trace/retrace/CMakeLists.txt;G:\trace\retrace\CMakeLists.txt;G:\trace\retrace\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\trace\msbuild\retrace\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule G:/trace/retrace/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HG:/trace -BG:/trace/msbuild --check-stamp-file G:\trace\msbuild\retrace\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:/trace/retrace/CMakeLists.txt;G:\trace\retrace\CMakeLists.txt;G:\trace\retrace\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\trace\msbuild\retrace\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\retrace\glws_wgl.cpp"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="G:/trace/msbuild/ZERO_CHECK.vcxproj">
+      <Project>407454B6-93F1-4309-B810-68FB3DFEE911</Project>
+    </ProjectReference>
+    <ProjectReference Include="G:/trace/msbuild/dispatch/glproc.vcxproj">
+      <Project>D5AA8125-46E7-44D7-99FE-29C9A4CC5778</Project>
+    </ProjectReference>
+    <ProjectReference Include="G:/trace/msbuild/dispatch/glproc_gl.vcxproj">
+      <Project>0AC604F8-529D-49AF-BCF0-8651B9BB9C84</Project>
+    </ProjectReference>
+    <ProjectReference Include="G:/trace/msbuild/retrace/glretrace_common.vcxproj">
+      <Project>A5D7417B-4C07-4061-84F7-C32F9573DF57</Project>
+    </ProjectReference>
+    <ProjectReference Include="G:/trace/msbuild/retrace/retrace_common.vcxproj">
+      <Project>FA0334B7-5CFB-45B9-8EB6-47F62805E4B7</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

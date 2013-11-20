@@ -1,0 +1,62 @@
+Determining if files pthread.h exist failed with the following output:
+Change Dir: G:/trace/msbuild/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec3136616052
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec3136616052, Configuration: Debug Win32 ------
+1>Build started 11/20/2013 6:45:16 PM.
+1>PrepareForBuild:
+1>  Creating directory "G:\trace\msbuild\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec3136616052.dir\Debug\cmTryCompileExec3136616052.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.40219.01 for 80x86
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec3136616052.dir\Debug\\" /Fd"G:/trace/msbuild/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3136616052.pdb" /Gd /TC /analyze- /errorReport:prompt CheckIncludeFiles.c  /Zm1000 
+1>  
+1>  CheckIncludeFiles.c
+1>CheckIncludeFiles.c(2): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+1>
+1>Build FAILED.
+1>
+1>Time Elapsed 00:00:00.05
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+Source:
+/* */
+#include <pthread.h>
+
+
+int main(){return 0;}
+
+Determining if the include file directxmath.h exists failed with the following output:
+Change Dir: G:/trace/msbuild/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~2\MICROS~2.0\Common7\IDE\devenv.com CMAKE_TRY_COMPILE.sln /build Debug /project cmTryCompileExec1663362179
+
+Microsoft (R) Visual Studio Version 10.0.40219.1.
+Copyright (C) Microsoft Corp. All rights reserved.
+1>------ Build started: Project: cmTryCompileExec1663362179, Configuration: Debug Win32 ------
+1>Build started 11/20/2013 6:45:17 PM.
+1>PrepareForBuild:
+1>  Creating directory "G:\trace\msbuild\CMakeFiles\CMakeTmp\Debug\".
+1>InitializeBuildStatus:
+1>  Creating "cmTryCompileExec1663362179.dir\Debug\cmTryCompileExec1663362179.unsuccessfulbuild" because "AlwaysCreate" was specified.
+1>ClCompile:
+1>  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.40219.01 for 80x86
+1>  Copyright (C) Microsoft Corporation.  All rights reserved.
+1>  
+1>  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR- /Fo"cmTryCompileExec1663362179.dir\Debug\\" /Fd"G:/trace/msbuild/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1663362179.pdb" /Gd /TP /analyze- /errorReport:prompt CheckIncludeFile.cxx  /Zm1000 
+1>  
+1>  CheckIncludeFile.cxx
+1>CheckIncludeFile.cxx(1): fatal error C1083: Cannot open include file: 'directxmath.h': No such file or directory
+1>
+1>Build FAILED.
+1>
+1>Time Elapsed 00:00:00.06
+========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+

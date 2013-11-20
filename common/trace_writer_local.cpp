@@ -65,7 +65,6 @@ static void exceptionCallback(void)
 LocalWriter::LocalWriter() :
     acquired(0)
 {
-    os::log("LocalWriter::LocalWriter()");
     os::log("apitrace: loaded\n");
 
     // Install the signal handlers as early as possible, to prevent
@@ -81,7 +80,7 @@ LocalWriter::~LocalWriter()
 
 void
 LocalWriter::open(void) {
-    os::log("LocalWriter::open");
+	os::log("LocalWriter:open\n");
     os::String szFileName;
 
     const char *lpFileName;
@@ -143,7 +142,7 @@ static OS_THREAD_SPECIFIC_PTR(void)
 thread_num;
 
 void LocalWriter::checkProcessId(void) {
-    os::log("LocalWriter::checkProcessId");
+	os::log("LocalWriter::checkProcessId\n");
     if (m_file->isOpened() &&
         os::getCurrentProcessId() != pid) {
         // We are a forked child process that inherited the trace file, so
@@ -158,7 +157,7 @@ void LocalWriter::checkProcessId(void) {
 }
 
 unsigned LocalWriter::beginEnter(const FunctionSig *sig, bool fake) {
-    os::log("LocalWriter::beginEnter");
+	os::log("LocalWriter::beginEnter\n");
     mutex.lock();
     ++acquired;
 
@@ -190,21 +189,18 @@ unsigned LocalWriter::beginEnter(const FunctionSig *sig, bool fake) {
 }
 
 void LocalWriter::endEnter(void) {
-    os::log("LocalWriter::endEnter");
     Writer::endEnter();
     --acquired;
     mutex.unlock();
 }
 
 void LocalWriter::beginLeave(unsigned call) {
-    os::log("LocalWriter::beginLeave");
     mutex.lock();
     ++acquired;
     Writer::beginLeave(call);
 }
 
 void LocalWriter::endLeave(void) {
-    os::log("LocalWriter::endLeave"); 
     Writer::endLeave();
     --acquired;
     mutex.unlock();
@@ -216,7 +212,7 @@ void LocalWriter::flush(void) {
      * while writing the file) as state could be inconsistent, therefore yield
      * inconsistent trace files and/or repeated segfaults till infinity.
      */
-    os::log("LocalWriter::flush");
+	os::log("LocalWriter::flush \n");
     mutex.lock();
     if (acquired) {
         os::log("apitrace: ignoring exception while tracing\n");
