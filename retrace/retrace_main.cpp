@@ -91,6 +91,7 @@ unsigned callNo = 0;
 
 void
 frameComplete(trace::Call &call) {
+	os::log("frameComplete, call name : %s\n", call.name());
     ++frameNo;
 }
 

@@ -149,7 +149,7 @@ static void retrace_eglBindAPI(trace::Call &call) {
 }
 
 static void retrace_eglCreateContext(trace::Call &call) {
-    os::log("glretrace_egl eglCreateContext\n");
+    os::log("egl starts to creating Context\n");
     unsigned long long orig_context = call.ret->toUIntPtr();
     unsigned long long orig_config = call.arg(1).toUIntPtr();
     Context *share_context = getContext(call.arg(2).toUIntPtr());

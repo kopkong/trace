@@ -45,7 +45,7 @@
 static trace::API
 guessApi(const char *filename)
 {
-    os::log("cli_retrace.cpp guessApi\n");
+    os::log("cli_retrace start guessing Api, filename : %s\n",filename);
     trace::Parser p;
     if (!p.open(filename)) {
         exit(1);
@@ -67,7 +67,7 @@ int
 executeRetrace(const std::vector<const char *> & opts,
                const char *traceName,
                trace::API api) {
-    os::log("cli_retrace.cpp executeRetrace \n");
+    os::log("cli_retrace start executing Retrace, traceName is %s \n", traceName);
     const char *retraceName;
     switch (api) {
     case trace::API_GL:
@@ -90,6 +90,8 @@ executeRetrace(const std::vector<const char *> & opts,
         break;
     }
 
+	os::log("retraceName is %s\n", retraceName);
+
     std::vector<const char *> command;
     os::String retracePath = findProgram(retraceName);
     if (retracePath.length()) {
@@ -105,6 +107,7 @@ executeRetrace(const std::vector<const char *> & opts,
     }
     command.push_back(NULL);
 
+	os::log("command[0] : %s",&command[0]);
     return os::execute((char * const *)&command[0]);
 }
 

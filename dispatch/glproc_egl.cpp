@@ -70,7 +70,7 @@ void *_libGlHandle = NULL;
 void *
 _getPublicProcAddress(const char *procName)
 {
-    os::log("_getPublicProcAddress");
+    os::log("_getPublicProcAddress, procName: %s\n",procName);
 #if defined(ANDROID)
     /*
      * Android does not support LD_PRELOAD.  It is assumed that applications
@@ -135,7 +135,6 @@ _getPublicProcAddress(const char *procName)
 void *
 _getPrivateProcAddress(const char *procName)
 {
-    os::log("_getPrivateProcAddress");
     void *proc;
     proc = _getPublicProcAddress(procName);
     if (!proc &&

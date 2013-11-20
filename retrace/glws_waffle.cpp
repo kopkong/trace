@@ -92,7 +92,7 @@ processEvents(void) {
 
 void
 init(void) {
-    os::log("glws_waffle init\n");
+    os::log("Init Waffle Context\n");
     int i;
     int waffle_init_attrib_list[3];
 
