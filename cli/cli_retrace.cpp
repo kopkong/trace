@@ -107,7 +107,7 @@ executeRetrace(const std::vector<const char *> & opts,
     }
     command.push_back(NULL);
 
-	os::log("command[0] : %s",&command[0]);
+	//os::log("command[0] : %s",&command[0]);
     return os::execute((char * const *)&command[0]);
 }
 

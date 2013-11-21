@@ -180,6 +180,7 @@ int execute(char * const * args)
 
     PROCESS_INFORMATION processInformation;
 
+	os::log("execute command line: %s\n", commandLine.c_str());
     if (!CreateProcessA(NULL,
                         const_cast<char *>(commandLine.c_str()), // only modified by CreateProcessW
                         0, // process attributes

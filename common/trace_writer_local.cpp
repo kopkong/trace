@@ -80,7 +80,7 @@ LocalWriter::~LocalWriter()
 
 void
 LocalWriter::open(void) {
-	os::log("LocalWriter:open\n");
+	//os::log("LocalWriter:open\n");
     os::String szFileName;
 
     const char *lpFileName;
@@ -142,7 +142,7 @@ static OS_THREAD_SPECIFIC_PTR(void)
 thread_num;
 
 void LocalWriter::checkProcessId(void) {
-	os::log("LocalWriter::checkProcessId\n");
+	//os::log("LocalWriter::checkProcessId\n");
     if (m_file->isOpened() &&
         os::getCurrentProcessId() != pid) {
         // We are a forked child process that inherited the trace file, so
@@ -157,7 +157,7 @@ void LocalWriter::checkProcessId(void) {
 }
 
 unsigned LocalWriter::beginEnter(const FunctionSig *sig, bool fake) {
-	os::log("LocalWriter::beginEnter\n");
+	//os::log("LocalWriter::beginEnter\n");
     mutex.lock();
     ++acquired;
 

@@ -80,7 +80,7 @@ getZygoteProcessName(void)
 bool
 isTracingEnabled(void)
 {
-    os::log("trace isTracingEnabled\n");
+    //os::log("trace isTracingEnabled\n");
     static pid_t cached_pid;
     static bool enabled;
     pid_t pid;

@@ -348,7 +348,7 @@ initContext() {
 
 void
 frame_complete(trace::Call &call) {
-    os::log("glretrace_main frame_complete\n");
+    //os::log("glretrace_main frame_complete\n");
     if (retrace::profiling) {
         /* Complete any remaining queries */
         flushQueries();

@@ -60,7 +60,7 @@ Writer::close(void) {
 
 bool
 Writer::open(const char *filename) {
-	os::log("Writer::open \n");
+	//os::log("Writer::open \n");
     close();
 
     if (!m_file->open(filename, File::Write)) {
@@ -173,7 +173,7 @@ void Writer::writeStackFrame(const RawStackFrame *frame) {
 }
 
 unsigned Writer::beginEnter(const FunctionSig *sig, unsigned thread_id) {
-	os::log("Writer::beginEnter \n");
+	//os::log("Writer::beginEnter \n");
     _writeByte(trace::EVENT_ENTER);
     _writeUInt(thread_id);
     _writeUInt(sig->id);
