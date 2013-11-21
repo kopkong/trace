@@ -1,0 +1,14 @@
+/home/devtools/data/rel-16/external/apitrace/build/cli/CMakeFiles/apitrace.dir
+/home/devtools/data/rel-16/external/apitrace/build/CMakeFiles/common.dir
+/home/devtools/data/rel-16/external/apitrace/build/wrappers/CMakeFiles/common_trace.dir
+/home/devtools/data/rel-16/external/apitrace/build/retrace/CMakeFiles/eglretrace.dir
+/home/devtools/data/rel-16/external/apitrace/build/wrappers/CMakeFiles/egltrace.dir
+/home/devtools/data/rel-16/external/apitrace/build/dispatch/CMakeFiles/glproc.dir
+/home/devtools/data/rel-16/external/apitrace/build/dispatch/CMakeFiles/glproc_egl.dir
+/home/devtools/data/rel-16/external/apitrace/build/dispatch/CMakeFiles/glproc_gl.dir
+/home/devtools/data/rel-16/external/apitrace/build/retrace/CMakeFiles/glretrace_common.dir
+/home/devtools/data/rel-16/external/apitrace/build/image/CMakeFiles/image.dir
+/home/devtools/data/rel-16/external/apitrace/build/thirdparty/libpng/CMakeFiles/png_bundled.dir
+/home/devtools/data/rel-16/external/apitrace/build/retrace/CMakeFiles/retrace_common.dir
+/home/devtools/data/rel-16/external/apitrace/build/thirdparty/snappy/CMakeFiles/snappy_bundled.dir
+/home/devtools/data/rel-16/external/apitrace/build/thirdparty/zlib/CMakeFiles/z_bundled.dir

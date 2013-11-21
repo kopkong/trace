@@ -1,0 +1,2 @@
+/home/devtools/data/android-ndk-r8e/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar cr ../../libs/armeabi-v7a/libglproc_gl.a  CMakeFiles/glproc_gl.dir/glproc_gl.cpp.o
+/home/devtools/data/android-ndk-r8e/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib ../../libs/armeabi-v7a/libglproc_gl.a

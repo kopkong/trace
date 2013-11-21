@@ -1,0 +1,8 @@
+*.spec
+*.tm
+*.txt
+*api.py
+glparams.py
+wglenum.py
+eglenum.py
+!Makefile

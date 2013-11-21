@@ -1,0 +1,22 @@
+Determining if files proc/readproc.h exist failed with the following output:
+Change Dir: /home/devtools/data/rel-16/external/apitrace/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3292052543/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3292052543.dir/build.make CMakeFiles/cmTryCompileExec3292052543.dir/build
+make[1]: Entering directory `/mnt/sdb1/rel-16/external/apitrace/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/devtools/data/rel-16/external/apitrace/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3292052543.dir/CheckIncludeFiles.c.o
+/home/devtools/data/android-ndk-r8e/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc  -DANDROID -fexceptions -Wno-psabi --sysroot=/home/devtools/data/android-ndk-r8e/platforms/android-9/arch-arm -fpic -funwind-tables -finline-limit=64 -fsigned-char -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fdata-sections -ffunction-sections -Wa,--noexecstack    -isystem /home/devtools/data/android-ndk-r8e/platforms/android-9/arch-arm/usr/include -isystem /home/devtools/data/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.7/include -isystem /home/devtools/data/android-ndk-r8e/sources/cxx-stl/gnu-libstdc++/4.7/libs/armeabi-v7a/include    -o CMakeFiles/cmTryCompileExec3292052543.dir/CheckIncludeFiles.c.o   -c /home/devtools/data/rel-16/external/apitrace/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/devtools/data/rel-16/external/apitrace/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:27: fatal error: proc/readproc.h: No such file or directory
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTryCompileExec3292052543.dir/CheckIncludeFiles.c.o] Error 1
+make[1]: Leaving directory `/mnt/sdb1/rel-16/external/apitrace/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec3292052543/fast] Error 2
+
+Source:
+/* */
+#include <proc/readproc.h>
+
+
+int main(){return 0;}
+
