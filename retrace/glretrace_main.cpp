@@ -83,7 +83,6 @@ debugOutputCallback(GLenum source, GLenum type, GLuint id, GLenum severity, GLsi
 
 void
 checkGlError(trace::Call &call) {
-    os::log("glretrace_main checkGlError\n");
     GLenum error = glGetError();
     while (error != GL_NO_ERROR) {
         std::ostream & os = retrace::warning(call);
@@ -413,7 +412,7 @@ getDebugOutputType(GLenum type) {
 
 static const char*
 getDebugOutputSeverity(GLenum severity) {
-    os::log("glretrace_main getDebugOutputSeverity\n"):
+    os::log("glretrace_main getDebugOutputSeverity\n");
     switch(severity) {
     case GL_DEBUG_SEVERITY_HIGH_ARB:
         return "High";
