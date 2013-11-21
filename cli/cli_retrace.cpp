@@ -33,6 +33,7 @@
 
 #include "os_string.hpp"
 #include "os_process.hpp"
+#include "os.hpp"
 
 #include "trace_parser.hpp"
 #include "cli_resources.hpp"
@@ -44,6 +45,7 @@
 static trace::API
 guessApi(const char *filename)
 {
+    os::log("cli_retrace.cpp guessApi\n");
     trace::Parser p;
     if (!p.open(filename)) {
         exit(1);
@@ -65,6 +67,7 @@ int
 executeRetrace(const std::vector<const char *> & opts,
                const char *traceName,
                trace::API api) {
+    os::log("cli_retrace.cpp executeRetrace \n");
     const char *retraceName;
     switch (api) {
     case trace::API_GL:
@@ -127,6 +130,7 @@ usage(void)
 static int
 command(int argc, char *argv[])
 {
+    os::log("cli_retrace.cpp command \n");
     std::vector<const char *> opts;
     for (int i = 1; i < argc; ++i) {
         opts.push_back(argv[i]);

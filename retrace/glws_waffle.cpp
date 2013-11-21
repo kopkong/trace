@@ -40,7 +40,7 @@ public:
 
     void
     resize(int w, int h) {
-        os::log("ws_waffle resize");
+        os::log("glws_waffle resize\n");
         if (w == width && h == height) {
             return;
         }
@@ -50,7 +50,7 @@ public:
 
     void
     show(void) {
-        os::log("ws_waffle show");
+        os::log("glws_waffle show\n");
         if (visible) {
             return;
         }
@@ -92,7 +92,7 @@ processEvents(void) {
 
 void
 init(void) {
-    os::log("ws_waffle init");
+    os::log("glws_waffle init\n");
     int i;
     int waffle_init_attrib_list[3];
 
@@ -117,7 +117,7 @@ cleanup(void) {
 
 Visual *
 createVisual(bool doubleBuffer, Profile profile) {
-    os::log("ws_waffle createVisual");
+    os::log("glws_waffle createVisual\n");
     struct waffle_config *cfg;
     int config_attrib_list[64], i(0), waffle_profile;
 
@@ -175,7 +175,7 @@ createVisual(bool doubleBuffer, Profile profile) {
 Drawable *
 createDrawable(const Visual *visual, int width, int height, bool pbuffer)
 {
-    os::log("ws_waffle createDrawable");
+    os::log("glws_waffle createDrawable\n");
     struct waffle_window *window;
     const WaffleVisual *waffleVisual =
         static_cast<const WaffleVisual *>(visual);
@@ -188,7 +188,7 @@ Context *
 createContext(const Visual *visual, Context *shareContext,
               bool debug)
 {
-    os::log("ws_waffle createContext");
+    os::log("glws_waffle createContext\n");
     struct waffle_context *context;
     const WaffleVisual *waffleVisual =
         static_cast<const WaffleVisual *>(visual);
@@ -213,7 +213,7 @@ createContext(const Visual *visual, Context *shareContext,
 bool
 makeCurrent(Drawable *drawable, Context *context)
 {
-    os::log("ws_waffle makeCurrent");
+    os::log("glws_waffle makeCurrent\n");
     if (!drawable || !context) {
         return waffle_make_current(dpy, NULL, NULL);
     } else {
