@@ -1,2 +1,0 @@
-/home/devtools/data/android-ndk-r8e/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar cr ../../libs/armeabi-v7a/libimage.a  CMakeFiles/image.dir/image_bmp.cpp.o CMakeFiles/image.dir/image_png.cpp.o CMakeFiles/image.dir/image_pnm.cpp.o CMakeFiles/image.dir/image_raw.cpp.o
-/home/devtools/data/android-ndk-r8e/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib ../../libs/armeabi-v7a/libimage.a

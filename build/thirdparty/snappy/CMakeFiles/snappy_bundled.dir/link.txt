@@ -1,2 +1,0 @@
-/home/devtools/data/android-ndk-r8e/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar cr ../../../libs/armeabi-v7a/libsnappy_bundled.a  CMakeFiles/snappy_bundled.dir/snappy.cc.o CMakeFiles/snappy_bundled.dir/snappy-sinksource.cc.o CMakeFiles/snappy_bundled.dir/snappy-stubs-internal.cc.o CMakeFiles/snappy_bundled.dir/snappy-c.cc.o
-/home/devtools/data/android-ndk-r8e/toolchains/arm-linux-androideabi-4.7/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ranlib ../../../libs/armeabi-v7a/libsnappy_bundled.a
