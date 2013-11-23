@@ -93,7 +93,7 @@ getContext(unsigned long long context_ptr) {
 
 static void createDrawable(unsigned long long orig_config, unsigned long long orig_surface)
 {
-    os::log("glretrace_egl createDrawable\n");
+    os::log("glretrace_egl createDrawable. orgi_config: %lld ,orig_surface:%lld \n",orig_config,orig_surface);
     ProfileMap::iterator it = profile_map.find(orig_config);
     glws::Profile profile;
 
@@ -111,7 +111,7 @@ static void createDrawable(unsigned long long orig_config, unsigned long long or
 }
 
 static void retrace_eglCreateWindowSurface(trace::Call &call) {
-    os::log("glretrace_egl eglCreateWindowSurface");
+    os::log("glretrace_egl eglCreateWindowSurface, call: %s ", call.name());
     unsigned long long orig_config = call.arg(1).toUIntPtr();
     unsigned long long orig_surface = call.ret->toUIntPtr();
     createDrawable(orig_config, orig_surface);
