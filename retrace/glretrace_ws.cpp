@@ -49,6 +49,7 @@ visuals;
 
 inline glws::Visual *
 getVisual(glws::Profile profile) {
+    os::log("glretrace_ws.cpp glws::Visual * getVisual \n");
     std::map<glws::Profile, glws::Visual *>::iterator it = visuals.find(profile);
     if (it == visuals.end()) {
         glws::Visual *visual = glws::createVisual(retrace::doubleBuffer, profile);
@@ -65,6 +66,7 @@ getVisual(glws::Profile profile) {
 
 static glws::Drawable *
 createDrawableHelper(glws::Profile profile, int width = 32, int height = 32, bool pbuffer = false) {
+    os::log("glretrace_ws.cpp createDrawableHelper \n");
     glws::Visual *visual = getVisual(profile);
     glws::Drawable *draw = glws::createDrawable(visual, width, height, pbuffer);
     if (!draw) {
@@ -96,6 +98,7 @@ createPbuffer(int width, int height) {
 
 Context *
 createContext(Context *shareContext, glws::Profile profile) {
+    os::log("glretrace_ws.cpp createContext \n");
     glws::Visual *visual = getVisual(profile);
     glws::Context *shareWsContext = shareContext ? shareContext->wsContext : NULL;
     glws::Context *ctx = glws::createContext(visual, shareWsContext, retrace::debug);
@@ -131,6 +134,7 @@ currentContextPtr;
 bool
 makeCurrent(trace::Call &call, glws::Drawable *drawable, Context *context)
 {
+    os::log("glretrace_ws.cpp makeCurrent \n");
     Context *currentContext = currentContextPtr;
     glws::Drawable *currentDrawable = currentContext ? currentContext->drawable : NULL;
 
@@ -184,6 +188,7 @@ getCurrentContext(void) {
  */
 void
 updateDrawable(int width, int height) {
+    os::log("glretrace_ws.cpp updateDrawable \n");
     Context *currentContext = getCurrentContext();
     if (!currentContext) {
         return;
