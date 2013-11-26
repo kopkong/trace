@@ -72,6 +72,8 @@ bool Parser::open(const char *filename) {
     }
     api = API_UNKNOWN;
 
+	os::log("Parser::open, api is:%d", api);
+	os::log("Parser::open end");
     return true;
 }
 
