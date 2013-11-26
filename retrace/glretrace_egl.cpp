@@ -115,7 +115,6 @@ static void retrace_eglCreateWindowSurface(trace::Call &call) {
 	os::log("glretrace_egl eglCreateWindowSurface, call thread_id is: %d ", call.thread_id);
 	os::log("glretrace_egl eglCreateWindowSurface, call no is: %d ", call.no);
 	os::log("glretrace_egl eglCreateWindowSurface, call sig name is: %s ", call.sig->name);
-	os::log("glretrace_egl eglCreateWindowSurface, call sig arg_names is: %s", call.sig->arg_names);
     unsigned long long orig_config = call.arg(1).toUIntPtr();
     unsigned long long orig_surface = call.ret->toUIntPtr();
     createDrawable(orig_config, orig_surface);

@@ -84,7 +84,7 @@ void Retracer::addCallbacks(const Entry *entries) {
 
 
 void Retracer::retrace(trace::Call &call) {
-    os::log("retrace.cpp Retracer::retrace");
+	os::log("retrace.cpp Retracer::retrace call name is:%s", call.name());
     call_dumped = false;
 
     Callback callback = 0;
@@ -97,6 +97,9 @@ void Retracer::retrace(trace::Call &call) {
         callback = callbacks[id];
     }
 
+	os::log("retrace.cpp Retracer::retrace callback = %d",callback);
+	os::log("retrace.cpp Retracer::retrace call.sig id = %d",call.sig->id);
+
     if (!callback) {
         Map::const_iterator it = map.find(call.name());
         if (it == map.end()) {
@@ -106,6 +109,7 @@ void Retracer::retrace(trace::Call &call) {
         }
         callbacks[id] = callback;
     }
+	os::log("retrace.cpp Retracer::retrace callback = %d",callback);
 
     assert(callback);
     assert(callbacks[id] == callback);
@@ -114,7 +118,7 @@ void Retracer::retrace(trace::Call &call) {
         if (verbosity >= 2 ||
             (!(call.flags & trace::CALL_FLAG_VERBOSE) &&
              callback != &ignore)) {
-            dumpCall(call);
+				 dumpCall(call);
         }
     }
 
