@@ -41,6 +41,7 @@ static bool call_dumped = false;
 
 
 static void dumpCall(trace::Call &call) {
+    os::log("retrace.cpp dumpCall");
     if (verbosity >= 0 && !call_dumped) {
         std::cout << std::hex << call.thread_id << std::dec << " ";
         trace::dump(call, std::cout, dumpFlags);
@@ -83,6 +84,7 @@ void Retracer::addCallbacks(const Entry *entries) {
 
 
 void Retracer::retrace(trace::Call &call) {
+    os::log("retrace.cpp Retracer::retrace");
     call_dumped = false;
 
     Callback callback = 0;

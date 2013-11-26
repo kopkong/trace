@@ -47,6 +47,7 @@ getProfileVersion(Profile profile, unsigned &major, unsigned &minor, bool &core)
 bool
 checkExtension(const char *extName, const char *extString)
 {
+    os::log("glws.cpp checkExtension");
     assert(extName);
     assert(extString);
 
@@ -81,6 +82,7 @@ Drawable::copySubBuffer(int x, int y, int width, int height) {
 
 bool
 Context::hasExtension(const char *string) {
+    os::log("glws.cpp hasExtension");
     if (extensions.empty()) {
         if (isCoreProfile(profile)) {
             // Use glGetStringi

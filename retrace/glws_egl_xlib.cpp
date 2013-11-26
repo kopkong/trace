@@ -62,6 +62,7 @@ public:
 
 
 static void describeEvent(const XEvent &event) {
+    os::log("glws_egl_xlib.cpp describeEvent" );
     if (0) {
         switch (event.type) {
         case ConfigureNotify:
@@ -97,6 +98,7 @@ public:
         Drawable(vis, w, h, pbuffer),
         api(EGL_OPENGL_ES_API)
     {
+	    os::log("glws_egl_xlib.cpp EglDrawable" );
         XVisualInfo *visinfo = static_cast<const EglVisual *>(visual)->visinfo;
 
         Window root = RootWindow(display, screen);
@@ -159,6 +161,7 @@ public:
 
     void
     recreate(void) {
+	    os::log("glws_egl_xlib.cpp recreate" );
         EGLContext currentContext = eglGetCurrentContext();
         EGLSurface currentDrawSurface = eglGetCurrentSurface(EGL_DRAW);
         EGLSurface currentReadSurface = eglGetCurrentSurface(EGL_READ);
@@ -181,6 +184,7 @@ public:
 
     void
     resize(int w, int h) {
+	    os::log("glws_egl_xlib.cpp resize" );
         if (w == width && h == height) {
             return;
         }
@@ -230,6 +234,7 @@ public:
     }
 
     void show(void) {
+	    os::log("glws_egl_xlib.cpp show" );
         if (visible) {
             return;
         }
@@ -274,6 +279,7 @@ public:
 static void
 load(const char *filename)
 {
+    os::log("glws_egl_xlib.cpp load" );
     if (!dlopen(filename, RTLD_GLOBAL | RTLD_LAZY)) {
         std::cerr << "error: unable to open " << filename << "\n";
         exit(1);
@@ -282,6 +288,7 @@ load(const char *filename)
 
 void
 init(void) {
+    os::log("glws_egl_xlib.cpp init" );
     load("libEGL.so.1");
 
     display = XOpenDisplay(NULL);
@@ -318,7 +325,9 @@ cleanup(void) {
 
 Visual *
 createVisual(bool doubleBuffer, Profile profile) {
+    os::log("glws_egl_xlib.cpp createVisual" );
     EglVisual *visual = new EglVisual(profile);
+	
     // possible combinations
     const EGLint api_bits_gl[7] = {
         EGL_OPENGL_BIT | EGL_OPENGL_ES_BIT | EGL_OPENGL_ES2_BIT,
@@ -397,12 +406,14 @@ createVisual(bool doubleBuffer, Profile profile) {
 Drawable *
 createDrawable(const Visual *visual, int width, int height, bool pbuffer)
 {
+    os::log("glws_egl_xlib.cpp createDrawable" );
     return new EglDrawable(visual, width, height, pbuffer);
 }
 
 Context *
 createContext(const Visual *_visual, Context *shareContext, bool debug)
 {
+    os::log("glws_egl_xlib.cpp createContext" );
     Profile profile = _visual->profile;
     const EglVisual *visual = static_cast<const EglVisual *>(_visual);
     EGLContext share_context = EGL_NO_CONTEXT;
@@ -447,6 +458,7 @@ createContext(const Visual *_visual, Context *shareContext, bool debug)
 bool
 makeCurrent(Drawable *drawable, Context *context)
 {
+    os::log("glws_egl_xlib.cpp makeCurrent" );
     if (!drawable || !context) {
         return eglMakeCurrent(eglDisplay, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);
     } else {
@@ -472,6 +484,7 @@ makeCurrent(Drawable *drawable, Context *context)
 
 bool
 processEvents(void) {
+    os::log("glws_egl_xlib.cpp processEvents" );
     while (XPending(display) > 0) {
         XEvent event;
         XNextEvent(display, &event);

@@ -91,7 +91,6 @@ unsigned callNo = 0;
 
 void
 frameComplete(trace::Call &call) {
-	os::log("frameComplete, call name : %s\n", call.name());
     ++frameNo;
 }
 
@@ -106,6 +105,7 @@ Dumper *dumper = &defaultDumper;
  */
 static void
 takeSnapshot(unsigned call_no) {
+    os::log("retrace_main.cpp takeSnapshot");
     static unsigned snapshot_no = 0;
 
     assert(snapshotPrefix);
@@ -151,6 +151,7 @@ takeSnapshot(unsigned call_no) {
  */
 static void
 retraceCall(trace::Call *call) {
+    os::log("retrace_main.cpp retraceCall");
     bool swapRenderTarget = call->flags &
         trace::CALL_FLAG_SWAP_RENDERTARGET;
     bool doSnapshot = snapshotFrequency.contains(*call);
@@ -277,6 +278,7 @@ public:
      */
     void
     runRace(void) {
+	    os::log("retrace_main.cpp runRace");
         os::unique_lock<os::mutex> lock(mutex);
 
         while (1) {
@@ -307,7 +309,7 @@ public:
      */
     void
     runLeg(trace::Call *call) {
-
+	    os::log("retrace_main.cpp runLeg");
         /* Consume successive calls for this thread. */
         do {
             bool callEndsFrame = false;
@@ -414,6 +416,7 @@ RelayRace::~RelayRace() {
  */
 RelayRunner *
 RelayRace::getRunner(unsigned leg) {
+    os::log("retrace_main.cpp getRunner");
     RelayRunner *runner;
 
     if (leg >= runners.size()) {
@@ -435,6 +438,7 @@ RelayRace::getRunner(unsigned leg) {
  */
 void
 RelayRace::run(void) {
+    os::log("retrace_main.cpp run");
     trace::Call *call;
     call = parser.parse_call();
     if (!call) {
@@ -468,6 +472,7 @@ RelayRace::run(void) {
  */
 void
 RelayRace::passBaton(trace::Call *call) {
+    os::log("retrace_main.cpp passBaton");
     if (0) std::cerr << "switching to thread " << call->thread_id << "\n";
     RelayRunner *runner = getRunner(call->thread_id);
     runner->receiveBaton(call);
@@ -504,6 +509,7 @@ RelayRace::stopRunners(void) {
 
 static void
 mainLoop() {
+    os::log("retrace_main.cpp mainLoop");
     addCallbacks(retracer);
 
     long long startTime = 0; 
@@ -622,6 +628,7 @@ static void exceptionCallback(void)
 extern "C"
 int main(int argc, char **argv)
 {
+    os::log("retrace_main main");
     using namespace retrace;
     int i;
 

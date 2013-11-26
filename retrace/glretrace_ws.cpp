@@ -231,6 +231,7 @@ updateDrawable(int width, int height) {
 
 int
 parseAttrib(const trace::Value *attribs, int param, int default_ = 0) {
+    os::log("glretrace_ws.cpp parseAttrib \n");
     const trace::Array *attribs_ = attribs ? attribs->toArray() : NULL;
 
     if (attribs_) {
