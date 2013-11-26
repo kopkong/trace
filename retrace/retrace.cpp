@@ -91,6 +91,7 @@ void Retracer::retrace(trace::Call &call) {
 
     trace::Id id = call.sig->id;
     if (id >= callbacks.size()) {
+		os::log("retrace.cpp Retracer::retrace id = %d, callbacks.size = %d", id,callbacks.size());
         callbacks.resize(id + 1);
         callback = 0;
     } else {
@@ -110,6 +111,7 @@ void Retracer::retrace(trace::Call &call) {
         callbacks[id] = callback;
     }
 	os::log("retrace.cpp Retracer::retrace callback = %d",callback);
+	os::log("retrace.cpp Retracer::retrace call.arg(1) = %lld",call.arg(1).toUIntPtr());
 
     assert(callback);
     assert(callbacks[id] == callback);
