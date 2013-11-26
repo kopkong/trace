@@ -151,7 +151,7 @@ takeSnapshot(unsigned call_no) {
  */
 static void
 retraceCall(trace::Call *call) {
-    os::log("retrace_main.cpp retraceCall");
+	os::log("retrace_main.cpp retraceCall, call name is: %s", call->name());
     bool swapRenderTarget = call->flags &
         trace::CALL_FLAG_SWAP_RENDERTARGET;
     bool doSnapshot = snapshotFrequency.contains(*call);
@@ -309,7 +309,8 @@ public:
      */
     void
     runLeg(trace::Call *call) {
-	    os::log("retrace_main.cpp runLeg");
+		os::log("retrace_main.cpp runLeg, call name is: %s", call->name());
+
         /* Consume successive calls for this thread. */
         do {
             bool callEndsFrame = false;
@@ -442,6 +443,7 @@ RelayRace::run(void) {
     trace::Call *call;
     call = parser.parse_call();
     if (!call) {
+		os::log("retrace_main.cpp, a null call");
         /* Nothing to do */
         return;
     }
@@ -451,9 +453,11 @@ RelayRace::run(void) {
      * for a trace that has only one frame we need to get it at the
      * beginning. */
     if (loopOnFinish) {
+		os::log("retrace_main.cpp, is loopOnFinish");
         parser.getBookmark(lastFrameStart);
     }
 
+	os::log("retrace_main.cpp create fore RelayRunner");
     RelayRunner *foreRunner = getForeRunner();
     if (call->thread_id == 0) {
         /* We are the forerunner thread, so no need to pass baton */
@@ -518,15 +522,23 @@ mainLoop() {
     startTime = os::getTime();
 
     if (singleThread) {
+		os::log("single thread");
         trace::Call *call;
         while ((call = parser.parse_call())) {
             retraceCall(call);
             delete call;
         };
     } else {
+		os::log("multi thread");
+
+		os::log("Create ReplayRace");
         RelayRace race;
+
+		os::log("Race run");
         race.run();
     }
+
+	os::log("main loop finish rendering");
     finishRendering();
 
     long long endTime = os::getTime();
@@ -628,7 +640,7 @@ static void exceptionCallback(void)
 extern "C"
 int main(int argc, char **argv)
 {
-    os::log("retrace_main main");
+    os::log("retrace_main.cpp main");
     using namespace retrace;
     int i;
 
@@ -775,12 +787,15 @@ int main(int argc, char **argv)
     os::setExceptionCallback(exceptionCallback);
 
     for (i = optind; i < argc; ++i) {
+		os::log("open parser, argv[%d]: %s", i,argv[i]);
         if (!retrace::parser.open(argv[i])) {
             return 1;
         }
 
+		os::log("start main loop");
         retrace::mainLoop();
 
+		os::log("close parser");
         retrace::parser.close();
     }
     
